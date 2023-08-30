@@ -11,22 +11,22 @@ const Navbar = () => {
     <div className="flex gap-2">
         <div className="w-12 h-12 flex items-center justify-center rounded-full cursor-pointer hover:border border-red">
             <Link href="/">
-                <Image src={Linkedin} width={25} />
+                <Image src={Linkedin} width={25} alt="Icon red" />
             </Link>
         </div>
         <div className="w-12 h-12 flex items-center justify-center rounded-full cursor-pointer hover:border border-red">
             <Link href="/">
-                <Image src={Github} width={25} />
+                <Image src={Github} width={25} alt="Icon red" />
             </Link>
         </div>
         <div className="w-12 h-12 flex items-center justify-center rounded-full cursor-pointer hover:border border-red">
             <Link href="/">
-                <Image src={Instagram} width={25} />
+                <Image src={Instagram} width={25} alt="Icon red" />
             </Link>
         </div>
         <div className="w-12 h-12 flex items-center justify-center rounded-full cursor-pointer hover:border border-red">
             <Link href="/">
-                <Image src={Twitter} width={25} />
+                <Image src={Twitter} width={25} alt="Icon red" />
             </Link>
         </div>
     </div>
