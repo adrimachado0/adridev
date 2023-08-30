@@ -7,12 +7,9 @@ export default function Home() {
     <main className="">
       <Main />
       <div className="w-1 h-14 bg-[#535353] bg-opacity-20 mx-auto my-16"></div>
-      <div className="flex flex-col gap-32">
+      <div className="flex flex-col gap-32 mb-32">
         <About />
         <Projects />
-        <About />
-        <About />
-        <About />
       </div>
     </main>
   )

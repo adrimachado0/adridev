@@ -12,11 +12,9 @@ const Projects = () => {
   const [proyectos, setProyectos] = useState();
 
   useEffect(() => {
-
     axios.get('https://portfolio-2023-psi-self.vercel.app/api/projects')
       .then(response => {return response.data})
       .then(data => {setProyectos(data)})
-
     return
   }, [])
   
