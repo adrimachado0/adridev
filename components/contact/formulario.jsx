@@ -36,7 +36,7 @@ const Formulario = () => {
             <textarea   onChange={handleChange} id="text"   value={values.text}   className="text-[15px] pl-2 py-1 w-full sm:w-[500px]  h-32 border-[1px] border-gray-300 focus:outline-none hover:border-gray-400 focus:border-gray-600 shadow-md rounded-lg resize-none"  type="email" placeholder="Escribe tu mensaje aquí..." />
             <button     className="bg-[#0E121F] text-white rounded-3xl py-1 hover:bg-[#444547] transition-all w-full sm:w-[500px]">Enviar</button>
             {
-                error && <p>{error}</p>
+                error && <p className="text-center bg-red-800 text-white px-5 py-1 rounded-lg font-bold">{error}</p>
             }
         </form>
     ) 
