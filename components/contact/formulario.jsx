@@ -1,6 +1,5 @@
 'use client';
 import { useState } from "react";
-import sendEmail from "../hooks/sendEmail";
 import axios, { AxiosError } from "axios";
 import confetti from "canvas-confetti";
 
