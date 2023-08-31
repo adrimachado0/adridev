@@ -30,7 +30,6 @@ const Formulario = () => {
             }
         }
     }
-
     return (
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-11/12 sm:w-fit mx-auto">
             <input      onChange={handleChange} id="email"  value={values.email}  className="text-[15px] pl-2      w-full sm:w-[500px]  h-8 border-[1px]       border-gray-300 focus:outline-none hover:border-gray-400 focus:border-gray-600 shadow-md rounded-lg"              type="email" placeholder="ejemplo@ejemplo.com" />
