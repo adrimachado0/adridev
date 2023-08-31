@@ -2,6 +2,7 @@
 import { useState } from "react";
 import sendEmail from "../hooks/sendEmail";
 import { AxiosError } from "axios";
+import confetti from "canvas-confetti";
 
 const Formulario = () => {
 
@@ -20,6 +21,8 @@ const Formulario = () => {
         e.preventDefault();
         try {
             const res = await sendEmail(values.email, values.text)
+            setError('')
+            confetti()
         } catch (error) {
             if(error instanceof AxiosError) {
                 console.log(error)

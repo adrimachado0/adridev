@@ -10,8 +10,8 @@ export async function POST(request) {
     const message = {
         from: email,
         to: process.env.NODEMAILER_EMAIL,
-        subject: text,
-        html: `<p>${text}</p>`,
+        subject: `Portfolio. Alguien te ha escrito algo.`,
+        html: `<p>Correo: ${email}<br/>Texto: ${text}</p>`,
     }
 
     let transporter = nodemailer.createTransport({
