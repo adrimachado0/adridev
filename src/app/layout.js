@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body className={`${poppins.className} h-screen max-w-[1300px] mx-auto background pt-24 font-medium`}>
+      <body className={`${poppins.className} h-screen max-w-[1300px] mx-auto background bg-[#FBFAFE] pt-24 font-medium`}>
         <Header />
           {children}
       </body>

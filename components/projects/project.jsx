@@ -19,7 +19,7 @@ const Project = ({titulo, descripcion, tecnologias, image}) => {
     console.log(descripcion)
 
     return (
-        <motion.div style={{scale:scaleProgress, opacity:opacityProgress}} ref={ref} className="group relative flex md:odd:justify-end w-full md:w-[700px] h-[300px] bg-[#F2F3F6] rounded-xl shadow-md mb-16 hover:bg-gray-200 hover:cursor-pointer transition-all overflow-hidden" >
+        <motion.div style={{scale:scaleProgress, opacity:opacityProgress}} ref={ref} className="group relative flex md:odd:justify-end w-full md:w-[700px] h-[300px] bg-[#F2F3F6] rounded-xl shadow-md mb-16 hover:bg-gray-200 hover:cursor-pointer transition-all overflow-hidden last:mb-0" >
             <div className="px-9 py-10 flex flex-col mx-auto md:mx-0 justify-between max-w-[350px]">
                 <div className="text-left flex flex-col gap-2">
                     <h3 className="font-semibold text-2xl">{titulo}</h3>
