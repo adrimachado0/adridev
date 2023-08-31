@@ -24,7 +24,9 @@ const Formulario = () => {
             setError('')
             confetti()
         } catch (error) {
+            console.log(error, "error")
             if(error instanceof AxiosError) {
+                console.log('instancia')
                 setError(error.response?.data.message)
             }
         }
