@@ -21,7 +21,7 @@ const Formulario = () => {
         e.preventDefault();
         try {
             const res = await axios.post(process.env.NEXT_PUBLIC_API_ROUTE, {email:values.email, text:values.text})
-            console.log(res)    
+            setMessage(res.data.message)   
             setError('')
             confetti()
         } catch (error) {
