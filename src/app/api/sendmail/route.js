@@ -5,7 +5,7 @@ export async function POST(request) {
 
     const {email, text} = await request.json();
 
-    if(!email || !text) return NextResponse.json({message:'Por favor, rellena todo el formulario.'})
+    if(!email || !text) return NextResponse.json({message:'Por favor, rellena todo el formulario.'}, {status:404})
     
     const message = {
         from: email,

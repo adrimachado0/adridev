@@ -10,6 +10,8 @@ const Formulario = () => {
         text:'',
     });
 
+    const [error, setError] = useState('')
+
     const handleChange = (e) => {
         setValues({...values, [e.target.id]:e.target.value})
     }
@@ -21,6 +23,7 @@ const Formulario = () => {
         } catch (error) {
             if(error instanceof AxiosError) {
                 console.log(error)
+                setError(error.response?.data.message)
             }
         }
     }
@@ -30,6 +33,9 @@ const Formulario = () => {
             <input      onChange={handleChange} id="email"  value={values.email}  className="text-[15px] pl-2      w-full sm:w-[500px]  h-8 border-[1px]       border-gray-300 focus:outline-none hover:border-gray-400 focus:border-gray-600 shadow-md rounded-lg"              type="email" placeholder="ejemplo@ejemplo.com" />
             <textarea   onChange={handleChange} id="text"   value={values.text}   className="text-[15px] pl-2 py-1 w-full sm:w-[500px]  h-32 border-[1px] border-gray-300 focus:outline-none hover:border-gray-400 focus:border-gray-600 shadow-md rounded-lg resize-none"  type="email" placeholder="Escribe tu mensaje aquí..." />
             <button     className="bg-[#0E121F] text-white rounded-3xl py-1 hover:bg-[#444547] transition-all w-full sm:w-[500px]">Enviar</button>
+            {
+                error && <p>{error}</p>
+            }
         </form>
     ) 
 }
