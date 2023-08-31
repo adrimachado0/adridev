@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const sendEmail = async (email, text) => {
-  const res = await axios.post('https://portfolio-2023-psi-self.vercel.app/api/sendemail', {
+  const res = await axios.post(process.env.API_ROUTE, {
     email:email,
     text:text,
   })
