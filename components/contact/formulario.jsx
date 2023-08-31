@@ -11,6 +11,7 @@ const Formulario = () => {
     });
 
     const [error, setError] = useState('')
+    const [message, setMessage] = useState('')
 
     const handleChange = (e) => {
         setValues({...values, [e.target.id]:e.target.value})
@@ -19,7 +20,8 @@ const Formulario = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(process.env.NEXT_PUBLIC_API_ROUTE, {email:values.email, text:values.text})
+            const res = await axios.post(process.env.NEXT_PUBLIC_API_ROUTE, {email:values.email, text:values.text})
+            console.log(res)    
             setError('')
             confetti()
         } catch (error) {
@@ -36,6 +38,9 @@ const Formulario = () => {
             <button     className="bg-[#0E121F] text-white rounded-3xl py-1 hover:bg-[#444547] transition-all w-full sm:w-[500px]">Enviar</button>
             {
                 error && <p className="text-center bg-red-800 text-white px-5 py-1 rounded-lg font-bold">{error}</p>
+            }
+            {
+                message && <p className="text-center bg-green-600 text-white px-5 py-1 rounded-lg font-bold">{message}</p>
             }
         </form>
     ) 

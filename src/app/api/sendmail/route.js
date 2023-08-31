@@ -24,9 +24,9 @@ export async function POST(request) {
     });
     try {
         const info = await transporter.sendMail(message);
-        return NextResponse.json({message:'Email enviado'}, {status:200})
+        return NextResponse.json({message:'Mensaje enviado correctamente!'}, {status:200})
     } catch (error) {
         console.log(error)
-        return NextResponse.json({message:error.message}, {status:404})
+        return NextResponse.json({message:'Ha ocurrido un error. Inténtalo nuevamente.'}, {status:404})
     }
 }
