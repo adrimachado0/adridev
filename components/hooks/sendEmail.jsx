@@ -7,7 +7,7 @@ const sendEmail = async (email, text) => {
       text:text,
     })
 
-    if(res.data.message) throw new Error(userFound.data.message)
+    if(res.data.message) throw new Error(res.data.message)
 
     return res
 };
