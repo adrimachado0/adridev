@@ -1,7 +1,7 @@
 'use client';
 import { useState } from "react";
 import sendEmail from "../hooks/sendEmail";
-import { AxiosError } from "axios";
+import axios, { AxiosError } from "axios";
 import confetti from "canvas-confetti";
 
 const Formulario = () => {
@@ -20,13 +20,11 @@ const Formulario = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await sendEmail(values.email, values.text)
+            const res = await axios.post(process.env.NEXT_PUBLIC_API_ROUTE, {email:values.email, text:values.text})
             setError('')
             confetti()
         } catch (error) {
-            console.log(error, "error")
             if(error instanceof AxiosError) {
-                console.log('instancia')
                 setError(error.response?.data.message)
             }
         }
