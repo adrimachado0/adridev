@@ -16,7 +16,6 @@ const Formulario = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(process.env.API_ROUTE)
         try {
             const res = await sendEmail(values.email, values.text)
         } catch (error) {

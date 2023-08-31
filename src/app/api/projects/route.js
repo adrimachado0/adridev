@@ -4,7 +4,13 @@ import mongoose from "mongoose";
 import Proyectos from "../../../../models/proyectosSchema";
 
 export async function GET () {
-    await connectMongoDB();
+    try {        
+        await mongoose.connect(process.env.MONGODB_URI)
+        console.log('MONGODB CONNECTED')
+    } catch (error) {
+        NextResponse.json({message:'Mongodb no se pudo conectar'})
+        console.log(error)
+    }
     try {
         const projects = await Proyectos.find({}).exec();
         mongoose.disconnect();
