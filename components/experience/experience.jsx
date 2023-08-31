@@ -39,30 +39,30 @@ const Experience = () => {
             <h3 className='text-center'>My Experience</h3>
             <VerticalTimeline
                 lineColor='#e5e7eb'
+                className='!max-w-[900px]'
             >
                 {
                     objectExperiences.map((experience, i) => (
-                        <>
-                            <VerticalTimelineElement
-                                key={i}
-                                contentStyle={{
-                                    background: "#f3f4f6",
-                                    boxShadow: "none",
-                                    border:"1px solid rgba(0, 0, 0, 0.05)",
-                                    textAlign: "left",
-                                    padding: "1.3rem 2rem",
-                                }}
-                                contentArrowStyle={{
-                                    borderRight: "0.4rem solid #9ca3af"
-                                }}
-                                date={experience.date}
-                                icon={<div className='flex items-center justify-center h-full bg-gray-200 rounded-full'><Image src={experience.logo} width={30} /></div>}
-                            >
-                                <h4 className='text-xl font-semibold'>{experience.title}</h4>
-                                <p>{experience.location}</p>
-                                <p>{experience.description}</p>
-                            </VerticalTimelineElement>
-                        </>
+                        <VerticalTimelineElement
+                            key={i}
+                            className='w-full'
+                            contentStyle={{
+                                background: "#f3f4f6",
+                                boxShadow: "none",
+                                border:"1px solid rgba(0, 0, 0, 0.05)",
+                                textAlign: "left",
+                                padding: "1.3rem 2rem",
+                            }}
+                            contentArrowStyle={{
+                                borderRight: "0.4rem solid #9ca3af"
+                            }}
+                            date={experience.date}
+                            icon={<div className='flex items-center justify-center h-full bg-gray-200 rounded-full'><Image alt='experiences logo' src={experience.logo} width={30} /></div>}
+                        >
+                            <h4 className='text-xl font-semibold'>{experience.title}</h4>
+                            <p>{experience.location}</p>
+                            <p>{experience.description}</p>
+                        </VerticalTimelineElement>
                     ))
                 }
             </VerticalTimeline>

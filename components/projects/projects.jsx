@@ -27,7 +27,7 @@ const Projects = () => {
 
   return (
     <div id='projects' className='w-full md:max-w-[715px] flex flex-col gap-3 items-center mx-auto text-center px-5 scroll-mt-28'>
-        <h3 onClick={() => {console.log(proyectos)}} className='text-2xl'>My projects</h3>
+        <h3  className='text-2xl'>My projects</h3>
         {
           proyectos ? proyectos.map((proyecto, i) => (
             <Project 

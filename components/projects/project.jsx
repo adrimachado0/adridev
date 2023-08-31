@@ -16,8 +16,6 @@ const Project = ({titulo, descripcion, tecnologias, image}) => {
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]); 
     const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
-    console.log(descripcion)
-
     return (
         <motion.div style={{scale:scaleProgress, opacity:opacityProgress}} ref={ref} className="group relative flex md:odd:justify-end w-full md:w-[700px] h-[300px] bg-[#F2F3F6] rounded-xl shadow-md mb-16 hover:bg-gray-200 hover:cursor-pointer transition-all overflow-hidden last:mb-0" >
             <div className="px-9 py-10 flex flex-col mx-auto md:mx-0 justify-between max-w-[350px]">

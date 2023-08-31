@@ -17,7 +17,7 @@ const Header = () => {
         </div>
         <div className='flex text-[15px] text-gray-400 gap-1'>
           <p onClick={() => handleScroll('experience')} className='px-2 hover:bg-gray-200 hover:text-black hover:px-2 hover:rounded-3xl cursor-pointer transition-all'>Experience</p>
-          <p className='px-2 hover:bg-gray-200 hover:text-black hover:px-2 hover:rounded-3xl cursor-pointer transition-all'>Contact</p>
+          <p onClick={() => handleScroll('contact')} className='px-2 hover:bg-gray-200 hover:text-black hover:px-2 hover:rounded-3xl cursor-pointer transition-all'>Contact</p>
         </div>
     </div>
   )
