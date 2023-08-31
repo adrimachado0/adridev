@@ -6,6 +6,7 @@ import Project from "./project"
 
 import Workables from './img/workables.png'
 import Shaper from './img/shaper.png'
+import Squared from './img/squared.png'
 
 const Projects = () => {
 
@@ -21,6 +22,7 @@ const Projects = () => {
   const imagesObject = {
     "Workables": Workables,
     "Shaper": Shaper,
+    "Squared": Squared,
   }
 
   return (
