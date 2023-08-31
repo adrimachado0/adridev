@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const sendEmail = async (email, text) => {
-  const res = await axios.post('http://localhost:3000/api/sendemail', {
+  const res = await axios.post(process.env.EMAIL_URL, {
     email:email,
     text:text,
   })
