@@ -7,9 +7,11 @@ export async function POST(request) {
     
     if(!email || !text) return NextResponse.json({message:'Por favor, rellena todo el formulario.'})
     
+    console.log('prueba')
+
     const message = {
         from: email,
-        to: process.env.NODEMAILER_EMAIL,
+        to: 'aadrimachado1@gmail.com',
         subject: text,
         html: `<p>${text}</p>`,
     }
@@ -18,8 +20,8 @@ export async function POST(request) {
         host: 'smtp.gmail.com',
         port: 587,
         auth: {
-          user: process.env.NODEMAILER_EMAIL,
-          pass: process.env.NODEMAILER_PW,
+          user: 'aadrimachado1@gmail.com',
+          pass: 'rzqyfrekbpyhcnpq',
         },
     });
     try {
