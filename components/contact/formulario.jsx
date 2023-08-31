@@ -19,7 +19,7 @@ const Formulario = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post(process.env.NEXT_PUBLIC_API_ROUTE, {email:values.email, text:values.text})
+            await axios.post(process.env.NEXT_PUBLIC_API_ROUTE, {email:values.email, text:values.text})
             setError('')
             confetti()
         } catch (error) {
