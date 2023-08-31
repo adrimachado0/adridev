@@ -4,11 +4,9 @@ import nodemailer from 'nodemailer'
 export async function POST(request) {
 
     const {email, text} = await request.json();
-    
+
     if(!email || !text) return NextResponse.json({message:'Por favor, rellena todo el formulario.'})
     
-    console.log('prueba')
-
     const message = {
         from: email,
         to: process.env.NODEMAILER_EMAIL,
