@@ -9,7 +9,7 @@ const sendEmail = async (email, text) => {
     })
     return res
   } catch (error) {
-    NextResponse.json({message:'Ocurrió un error, inténtalo nuevamente.'}, {status: 404})
+    return NextResponse.json({message:'Ocurrió un error, inténtalo nuevamente.'}, {status: 404})
   }
 };
 
