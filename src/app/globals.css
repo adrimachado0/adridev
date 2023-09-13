@@ -6,4 +6,5 @@
 .background {
     background-image: linear-gradient(to bottom, #eddef7, #f4e0f2, #f7e2ed, #f7e6eb, #FBFAFE, #FBFAFE);
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }

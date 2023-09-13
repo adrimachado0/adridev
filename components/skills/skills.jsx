@@ -38,7 +38,7 @@ const Skills = () => {
 
     return (
         <div id='skills' className='max-w-[750px] scroll-mt-28 text-center mx-auto'>
-            <h3 className='text-2xl mb-8'>My Skills</h3>
+            <h3 className='text-2xl mb-8'>Mis habilidades</h3>
             <div className='flex flex-wrap justify-center gap-2 text-lg text-gray-800'>
                 {
                     tagSkill.map((skill, i) => (

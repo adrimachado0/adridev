@@ -1,4 +1,7 @@
 'use client'
+
+import Link from "next/link"
+
 import { useState, useEffect } from "react"
 import axios from "axios"
 
@@ -27,16 +30,17 @@ const Projects = () => {
 
   return (
     <div id='projects' className='w-full md:max-w-[715px] flex flex-col gap-3 items-center mx-auto text-center px-5 scroll-mt-28'>
-        <h3  className='text-2xl'>My projects</h3>
+        <h3  className='text-2xl'>Mis proyectos</h3>
         {
           proyectos ? proyectos.map((proyecto, i) => (
             <Project 
+                key={i}
                 titulo={proyecto.titulo}
                 descripcion={proyecto.descripcion}
                 tecnologias={proyecto.tecnologias}
                 image={imagesObject[proyecto.image]}
-                key={i}
-            />
+                link={proyecto.link}
+              />
           ))
           : <p>loading</p>
         }

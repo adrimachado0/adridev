@@ -36,7 +36,7 @@ const Experience = () => {
 
     return (
         <div id='experience' className='text-2xl scroll-mt-28'>
-            <h3 className='text-center'>My Experience</h3>
+            <h3 className='text-center'>Mi experiencia</h3>
             <VerticalTimeline
                 lineColor='#e5e7eb'
                 className='!max-w-[900px]'
