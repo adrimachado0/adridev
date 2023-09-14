@@ -4,7 +4,7 @@ import { Poppins } from 'next/font/google'
 const poppins = Poppins({ subsets: ['latin'], weight:['400', '500','700', '600', '300', '200', '100'] })
 
 export const metadata = {
-  title: 'adridev | FullStack Developer',
+  title: 'ADRIDEV | FullStack Developer',
   description: 'Portfolio de Adriel Machado Developer.',
 }
 
