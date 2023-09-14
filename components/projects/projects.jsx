@@ -16,7 +16,7 @@ const Projects = () => {
   const [proyectos, setProyectos] = useState();
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/projects')
+    axios.get('https://adridev-ikua288bs-adrimachado0.vercel.app//api/projects')
       .then(response => response.data)
       .then(data => {setProyectos(data)})
     return
