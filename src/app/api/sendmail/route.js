@@ -9,7 +9,7 @@ export async function POST(request) {
     
     const message = {
         from: email,
-        to: "aadrimachado1@gmail.com",
+        to: process.env.NODEMAILER_EMAIL,
         subject: `Portfolio. Alguien te ha escrito algo.`,
         html: `<p>Correo: ${email}<br/>Texto: ${text}</p>`,
     }
@@ -18,8 +18,8 @@ export async function POST(request) {
         host: 'smtp.gmail.com',
         port: 587,
         auth: {
-          user: "aadrimachado1@gmail.com",
-          pass: "rzqyfrekbpyhcnpq",
+          user: process.env.NODEMAILER_EMAIL,
+          pass: process.env.NODEMAILER_PW,
         },
     });
     try {
