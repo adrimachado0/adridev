@@ -10,6 +10,7 @@ import Project from "./project"
 import Workables from './img/workables.png'
 import Shaper from './img/shaper.png'
 import Squared from './img/squared.png'
+import Fonoaudiologia from './img/fonoaudiologia.png'
 
 const Projects = () => {
 
@@ -26,6 +27,7 @@ const Projects = () => {
     "Workables": Workables,
     "Shaper": Shaper,
     "Squared": Squared,
+    "Fonoaudiologia":Fonoaudiologia,
   }
 
   return (
