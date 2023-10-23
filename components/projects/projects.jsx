@@ -17,9 +17,9 @@ const Projects = () => {
   const [proyectos, setProyectos] = useState();
 
   useEffect(() => {
-    axios.get('https://adridev-ikua288bs-adrimachado0.vercel.app/api/projects')
+    axios.get(`${process.env.NEXT_PUBLIC_API_ROUTE}/api/projects`)
       .then(response => response.data)
-      .then(data => {setProyectos(data)})
+      .then(data => {setProyectos(data); console.log(data)})
     return
   }, [])
   

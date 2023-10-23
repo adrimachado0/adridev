@@ -7,7 +7,6 @@ export async function GET () {
     await connectMongoDB();
     try {
         const projects = await Proyectos.find({}).exec();
-        mongoose.disconnect();
         return NextResponse.json(projects, {status:201});
     } catch (error) {
         console.log(error)
