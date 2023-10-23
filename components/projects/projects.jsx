@@ -44,7 +44,7 @@ const Projects = () => {
                 link={proyecto.link}
               />
           ))
-          : <p>loading</p>
+          : <p>cargando</p>
         }
     </div>
   )
