@@ -31,22 +31,33 @@ const Projects = () => {
   }
 
   return (
-    <div id='projects' className='w-full md:max-w-[715px] flex flex-col gap-3 items-center mx-auto text-center px-5 scroll-mt-28'>
-        <h3  className='text-2xl'>Mis proyectos</h3>
-        {
-          proyectos ? proyectos.map((proyecto, i) => (
-            <Project 
-                key={i}
-                titulo={proyecto.titulo}
-                descripcion={proyecto.descripcion}
-                tecnologias={proyecto.tecnologias}
-                image={imagesObject[proyecto.image]}
-                link={proyecto.link}
+    <>
+      <div className="mx-auto text-center flex flex-col gap-5">
+        <h3 className='text-2xl'>Última presentación</h3>
+        <video
+          className='w-[98%] lg:w-10/12 mx-auto rounded-3xl'
+          src="https://res.cloudinary.com/dksuajem1/video/upload/v1698618997/2023-10-29-19-24-01_dqa3zr.mp4"
+          title="Mi tienda web."
+          controls
+        />
+      </div>
+      <div id='projects' className='w-full md:max-w-[715px] flex flex-col gap-3 items-center mx-auto text-center px-5 scroll-mt-28'>
+          <h3  className='text-2xl'>Mis proyectos</h3>
+          {
+            proyectos ? proyectos.map((proyecto, i) => (
+              <Project 
+              key={i}
+              titulo={proyecto.titulo}
+              descripcion={proyecto.descripcion}
+              tecnologias={proyecto.tecnologias}
+              image={imagesObject[proyecto.image]}
+              link={proyecto.link}
               />
-          ))
-          : <p>cargando</p>
-        }
-    </div>
+              ))
+              : <p>cargando</p>
+            }
+      </div>
+    </>
   )
 }
 
