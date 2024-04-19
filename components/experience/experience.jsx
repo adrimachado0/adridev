@@ -30,6 +30,13 @@ const Experience = () => {
             location:"Argentina",
             description:"Actualmente, trabajo como desarrollador full-stack. Dentro de mi stack, la tecnología principal es Next.js, seguido de, MongoDB y Tailwind.css. Abierto a nuevas oportunidades.",
             logo:NextLogo,
+            date:"2023",
+        },
+        {
+            title:"Dunno Agency",
+            location:"Argentina",
+            description:"Agencia digital de desarrollo y diseño. Utilizando el MERN stack, logrando las ideas de todos nuestros clientes.",
+            logo:ReactLogo,
             date:"2023 - actualmente",
         }
     ]

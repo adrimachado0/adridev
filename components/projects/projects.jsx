@@ -1,5 +1,7 @@
 'use client'
 
+import DataWebs from '../../data.json'
+
 import Link from "next/link"
 
 import { useState, useEffect } from "react"
@@ -11,6 +13,7 @@ import Workables from './img/workables.png'
 import Shaper from './img/shaper.png'
 import Squared from './img/squared.png'
 import Fonoaudiologia from './img/fonoaudiologia.png'
+import Dunno from './img/dunno.png'
 
 const Projects = () => {
 
@@ -56,6 +59,13 @@ const Projects = () => {
               ))
               : <p>cargando</p>
             }
+            <Project 
+              titulo={DataWebs.titulo}
+              descripcion={DataWebs.descripcion}
+              tecnologias={DataWebs.tecnologias}
+              link={DataWebs.link}
+              image={Dunno}
+            />
       </div>
     </>
   )
