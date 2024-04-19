@@ -68,6 +68,7 @@ const Projects = () => {
             {
               DataWebs.map(web => (
                 <Project 
+                  key={web.titulo}
                   titulo={web.titulo}
                   descripcion={web.descripcion}
                   tecnologias={web.tecnologias}
