@@ -14,6 +14,7 @@ import Shaper from './img/shaper.png'
 import Squared from './img/squared.png'
 import Fonoaudiologia from './img/fonoaudiologia.png'
 import Dunno from './img/dunno.png'
+import Briefly from './img/briefly.png'
 
 const Projects = () => {
 
@@ -31,6 +32,11 @@ const Projects = () => {
     "Shaper": Shaper,
     "Squared": Squared,
     "Fonoaudiologia":Fonoaudiologia,
+  }
+
+  const dataWebsImage = {
+    "Dunno":Dunno,
+    "Briefly":Briefly
   }
 
   return (
@@ -59,13 +65,17 @@ const Projects = () => {
               ))
               : <p>cargando</p>
             }
-            <Project 
-              titulo={DataWebs.titulo}
-              descripcion={DataWebs.descripcion}
-              tecnologias={DataWebs.tecnologias}
-              link={DataWebs.link}
-              image={Dunno}
-            />
+            {
+              DataWebs.map(web => (
+                <Project 
+                  titulo={web.titulo}
+                  descripcion={web.descripcion}
+                  tecnologias={web.tecnologias}
+                  link={web.link}
+                  image={dataWebsImage[web.image]}
+                />
+              ))
+            }
       </div>
     </>
   )

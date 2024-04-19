@@ -1,6 +1,16 @@
-{
-    "titulo":"Dunno Agency",
-    "descripcion":"Web de mi agencia digital",
-    "tecnologias":"React Tailwindcss",
-    "link":"https://www.dunno.agency/"
-}
+[
+    {
+        "titulo":"Dunno Agency",
+        "descripcion":"Web de mi agencia digital",
+        "tecnologias":"React Tailwindcss",
+        "link":"https://www.dunno.agency/",
+        "image":"Dunno"
+    },
+    {
+        "titulo":"Briefly",
+        "descripcion":"Acortador de URLS. Diseño y desarrollo hecho por mí.",
+        "tecnologias":"MongoDB Express React NodeJS Tailwindcss Framer-Motion",
+        "link":"https://briefly-url.vercel.app/",
+        "image":"Briefly"
+    }
+]
